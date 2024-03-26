@@ -1,12 +1,13 @@
 package features.telas.lojinha;
 
-import org.openqa.selenium.By;
-
-import static features.tests.lojinha.produto.BaseTest.app;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
 public class ListaDeProdutosTela extends BaseTela{
+    @FindBy(id = "com.lojinha:id/floatingActionButton")
+    private WebElement botaoAdicionarProduto;
     public AdicionarProdutoTela clicarNoBotaoDeAdicionarProduto(){
-        app.findElement(By.id("com.lojinha:id/floatingActionButton")).click();
+        botaoAdicionarProduto.click();
         return new AdicionarProdutoTela();
     }
 }

@@ -1,17 +1,24 @@
 package features.telas.lojinha;
 
 import org.openqa.selenium.By;
-
-import static features.tests.lojinha.produto.BaseTest.app;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
 public class LoginTela extends BaseTela{
+
+    @FindBy(id = "com.lojinha:id/button")
+    private WebElement botaoEntrar;
+    @FindBy(id = "com.lojinha:id/user")
+    private WebElement elementoUsuarioPai;
+    @FindBy(id = "com.lojinha:id/password")
+    private WebElement elementoSenhaPai;
     public LoginTela preencherDadosDoUsuario(String usuario, String senha){
-        app.findElement(By.id("com.lojinha:id/user")).findElement(By.id("com.lojinha:id/editText")).sendKeys(usuario);
-        app.findElement(By.id("com.lojinha:id/password")).findElement(By.id("com.lojinha:id/editText")).sendKeys(senha);
+        elementoUsuarioPai.findElement(By.id("com.lojinha:id/editText")).sendKeys(usuario);
+        elementoSenhaPai.findElement(By.id("com.lojinha:id/editText")).sendKeys(senha);
         return this;
     }
     public ListaDeProdutosTela clicarEmEntrar(){
-        app.findElement(By.id("com.lojinha:id/button")).click();
+        botaoEntrar.click();
         return new ListaDeProdutosTela();
     }
 }
