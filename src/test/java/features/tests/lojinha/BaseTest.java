@@ -1,4 +1,4 @@
-package features.tests.lojinha.produto;
+package features.tests.lojinha;
 
 import io.appium.java_client.android.AndroidDriver;
 import org.junit.jupiter.api.AfterEach;

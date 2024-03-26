@@ -1,12 +1,14 @@
 package features.tests.lojinha.produto;
 
+import features.tests.lojinha.BaseTest;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static support.spec_helper.InitializeTela.telaLogin;
 
-public class AdicionarProdutoTest extends BaseTest{
+@DisplayName("Adicionar produtos ao usuário")
+public class AdicionarProdutoTest extends BaseTest {
     @Test
     @DisplayName("Validar cadastro de produto para o usuário")
     public void testValidarCadastroDeProdutoParaOUsuario() {

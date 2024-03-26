@@ -1,11 +1,13 @@
 package features.telas.lojinha;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import static features.tests.lojinha.produto.BaseTest.app;
+import java.util.NoSuchElementException;
+
+import static features.tests.lojinha.BaseTest.app;
+import static support.commands.Commands.elementVisible;
 
 public class BaseTela {
     @FindBy(xpath = "//android.widget.Toast")
@@ -15,5 +17,8 @@ public class BaseTela {
     }
     public String capturarMensagem(){
         return mensagemToast.getText();
+    }
+    public boolean elementoEstaVisivel(WebElement elemento) {
+        return elementVisible(elemento);
     }
 }
