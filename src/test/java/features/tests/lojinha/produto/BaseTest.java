@@ -20,7 +20,7 @@ public class BaseTest {
         caps.setCapability("platformName", "Android");
         caps.setCapability("appPackage", "com.lojinha");
         caps.setCapability("appActivity", "com.lojinha.ui.MainActivity");
-        caps.setCapability("app", "C:\\Users\\Fox\\Desktop\\Mentoria em testes de Software\\apps\\lojinha-nativa.apk");
+        caps.setCapability("app", "C:\\Users\\Fox\\Desktop\\Mentoria em testes de Software\\Automação Mobile\\Automacao-Mobile-Java-Appium\\app\\lojinha-nativa.apk");
 
         app = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), caps);
         app.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
